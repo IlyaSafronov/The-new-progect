@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+
+:root {
+  --fontFamili-primary: 'Golos Text', sans-serif;
+  --fontFamily-secondary: 'Merriweather', sans-serif;
+  --colorBtn-primary: #1f1f1f;
+
+  --colorHover-primary: #fbce51;
+
+  --colorBtn-secondaryTwo: #d50032;
+  --color-extra: #d4e9e2;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  height: 100%;
+  align-items: start;
+  padding: 20px 50px;
+  z-index: 1;
+}
+
+.main-header .logo {
+  display: flex;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+}
+
+.logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.logo-text {
+  font-family: var(--fontFamili-primary);
+  font-weight: 700;
+  color: #595653;
+  text-transform: uppercase;
+}
+
+section {
+  position: relative;
+  height: 100vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section-inner {
+  position: absolute;
+  bottom: 135px;
+  left: 50px;
+  max-width: 560px;
+  z-index: 4;
+}
+
+.section-inner h1 {
+  font-family: var(--fontFamily-secondary);
+  color: #313131;
+  font-size: 60px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-weight: 400;
+  animation: fadeInUp 0.5s ease-in-out;
+  animation-fill-mode: both;
+}
+
+span {
+  display: block;
+  text-align: center;
+}
+.description-text {
+  text-align: center;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.section-inner p {
+  font-family: 'Golos Text', sans-serif;
+  font-size: 18px;
+  color: #313131;
+  font-weight: 400;
+  margin-bottom: 20px;
+  animation: fadeInUp 0.5s ease-in-out 0.2s;
+}
+
+.section-inner a {
+  font-family: 'Golos Text', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  animation: fadeInUp 0.5s ease-in-out 0.4s;
+  animation-fill-mode: both;
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 60px;
+  font-weight: 500;
+  padding: 12px 12px;
+  line-height: 1.2;
+  text-align: center;
+  min-width: 190px;
+  text-decoration: none;
+  z-index: 2;
+  
+}
+
+
+
+
+.btn-dark-otline {
+  background-color: var(--colorBtn-primary);
+  border: none;
+  color: #f1f1f1;
+}
+
+.btn-light-outline {
+  background: none;
+  border: 2px #1f1f1f solid;
+  color: #1f1f1f;
+}
+
+.btn-dark-otline:hover {
+  background-color: var(--colorHover-primary);
+  color: #1f1f1f;
+}
+
+.btn-light-outline:hover {
+  background-color: #1f1f1f;
+  color: #fff;
+}
+
+/* ! Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(140px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ! Background images */
+
+.section-a {
+  background-image: url('./img/backgrondHeader.png');
+}
+
+/* ! Media Queries */
+@media(max-width: 600px) {
+  .section-inner h1 {
+    font-size: 50px;
+  }
+}
+
+@media(max-width: 500px) {
+  .section-inner h1 {
+    font-size: 40px;
+  }
+  
+}
+
+
+
+@media (max-width: 375px) {
+  .section-a {
+    background-image: url('./img/Group8.png');
+  }
+  .section-inner {
+    bottom: 75px;
+    left: 20px;
+  }
+  .section-inner h1 {
+    font-size: 36px;
+  }
+  .btn {
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+  
+  }
+  
+.section-inner {
+  position: absolute;
+  bottom: 240px;
+ 
+  max-width: 560px;
+  z-index: 4;
+}
+
+.description-text {
+  text-align: start;
+  font-weight: 400;
+  font-size: 18px;
+}
+.main-header {
+  padding: 10px 20px;
+}
+.btn-light-outline {
+  border: none;
+  background-color: #fff;
+  color: #1f1f1f;
+}
+.btn {
+  /* margin: 5px; */
+  padding: 10px 10px;
+}
+.section-inner h1 {
+  line-height: 1.1;
+}
+
+}
